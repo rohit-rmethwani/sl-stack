@@ -17,12 +17,12 @@
             data: JSON.stringify({
                 client_id: "14149",
                 scope: "write_access",
-                redirect_uri: 'https://gauravbpunjabi.000webhostapp.com/overflow/test.php',
+                redirect_uri: 'https://sl-mcq.herokuapp.com/blank.html',
                 success: function(response) {
                     alert(response);
                 }
-            });
-        })
+            })
+        });
 
         // SE.init({
         //     clientId: 14149,
