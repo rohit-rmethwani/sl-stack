@@ -16,11 +16,11 @@
 <body>
     
     <form action="https://stackoverflow.com/oauth/access_token" method="POST">
-        <!-- <input type="text" name="client_id" value="14150"> -->
-        <!-- <input type="text" name="client_secret" value="gB2HO2LZdAjRrwfKH)7B*A(("> -->
+        <input type="text" name="client_id" value="14150">
+        <input type="text" name="client_secret" value="gB2HO2LZdAjRrwfKH)7B*A((">
         <input type="text" id="code" name="code" value="<?php echo $code; ?>">
-        <!-- <input type="text" name="redirect_uri" value="https://sl-mcq.herokuapp.com/blank.php"> -->
-        <!-- <button type="submit">CLick me please</button> -->
+        <input type="text" name="redirect_uri" value="https://sl-mcq.herokuapp.com/blank.php">
+        <button type="submit">CLick me please</button>
     </form>       
 
     <script
