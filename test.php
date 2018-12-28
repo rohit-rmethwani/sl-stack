@@ -24,7 +24,7 @@
                 redirect_uri: 'https://sl-mcq.herokuapp.com/blank.html',
             }),
             success: function(response) {
-                alert(response);
+                console.log(response);
             }
         });
 
