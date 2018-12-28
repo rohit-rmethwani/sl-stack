@@ -15,7 +15,7 @@
     crossorigin="anonymous"></script>
 
 <?php 
-    header("Location: https://stackoverflow.com/oauth?client_id=14149&scope=write_access&redirect_uri=https://sl-mcq.herokuapp.com/blank.html")
+    header("Location: https://stackoverflow.com/oauth?client_id=14150&scope=write_access&redirect_uri=https://sl-mcq.herokuapp.com/blank.html")
 
 
 
