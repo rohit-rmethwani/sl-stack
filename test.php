@@ -14,19 +14,10 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 
-    <script type='text/javascript'>
-        $.ajax({
-            type: 'POST',
-            url: "https://stackoverflow.com/oauth",
-            data: JSON.stringify({
-                client_id: "14149",
-                scope: "write_access",
-                redirect_uri: 'https://sl-mcq.herokuapp.com/blank.html',
-            }),
-            success: function(response) {
-                console.log(response);
-            }
-        });
+<?php 
+    header("Location: https://stackoverflow.com/oauth?client_id=14149&scope=write_access&redirect_uri=https://sl-mcq.herokuapp.com/blank.html")
+
+
 
         // SE.init({
         //     clientId: 14149,
@@ -47,7 +38,6 @@
         // });
     
 
-
-    </script>
+?>
 </body>
 </html>
