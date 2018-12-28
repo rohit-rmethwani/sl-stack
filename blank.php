@@ -57,12 +57,12 @@
             XHR.send(urlEncodedData);
         }
 
-        alert(<?php echo $code; ?>);
+        alert("<?php echo $code; ?>");
 
         var data = {
             client_id: "14152",
             client_secret: "AMrLG*xYlOZJoGv5PMAFoA((",
-            code: <?php echo $code; ?>,
+            code: "<?php echo $code; ?>",
             redirect_uri: "https://sl-mcq.herokuapp.com/authenticated.php"
         };
         
