@@ -21,7 +21,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 
-    <script>
+    <!-- <script>
         function sendData(data) {
             var XHR = new XMLHttpRequest();
             var urlEncodedData = "";
@@ -69,6 +69,6 @@
         };
         
         sendData(data);
-    </script>
+    </script> -->
 </body>
 </html>
