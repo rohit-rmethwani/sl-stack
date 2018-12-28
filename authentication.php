@@ -9,13 +9,18 @@
 <body>
     
     <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
 
-<?php 
-    header("Location: https://stackoverflow.com/oauth?client_id=14150&scope=write_access&redirect_uri=https://sl-mcq.herokuapp.com/blank.php")
-?>
+    <script type='text/javascript'>
+        SE.init({
+            clientId: 14146,
+            key: '*bgZ18BibbkYhX2YTHjBhQ((',
+            channelUrl: 'steel-erp-client.herokuapp.com',
+            complete: function (data) {
+                alert("Success");
+            }
+        });
+        
+        
+    </script>
 </body>
 </html>

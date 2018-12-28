@@ -15,13 +15,6 @@
 </head>
 <body>
     
-    <form action="https://stackoverflow.com/oauth/access_token" method="POST">
-        <input type="text" name="client_id" value="14150">
-        <input type="text" name="client_secret" value="gB2HO2LZdAjRrwfKH)7B*A((">
-        <input type="text" id="code" name="code" value="<?php echo $code; ?>">
-        <input type="text" name="redirect_uri" value="https://sl-mcq.herokuapp.com/blank.php">
-        <button type="submit">CLick me please</button>
-    </form>       
 
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -29,21 +22,51 @@
     crossorigin="anonymous"></script>
 
     <script>
-        var code = $('#code').attr('value');
-        $.ajax({
-            type: "POST",
-            url: "https://stackoverflow.com/oauth/access_token",
-            contentType="application/x-www-form-urlencoded",
-            data: {
-                client_id: "14150",
-                client_secret: "gB2HO2LZdAjRrwfKH)7B*A((",
-                code: code,
-                redirect_uri: "https://sl-mcq.herokuapp.com/blank.php"
-            },
-            success: function(response) {
-                alert(response);
+        function sendData(data) {
+            var XHR = new XMLHttpRequest();
+            var urlEncodedData = "";
+            var urlEncodedDataPairs = [];
+            var name;
+
+            // Turn the data object into an array of URL-encoded key/value pairs.
+            for(name in data) {
+                urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
             }
-        });
+
+            // Combine the pairs into a single string and replace all %-encoded spaces to 
+            // the '+' character; matches the behaviour of browser form submissions.
+            urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+            // Define what happens on successful data submission
+            XHR.addEventListener('load', function(event) {
+                alert('Yeah! Data sent and response loaded.');
+            });
+
+            // Define what happens in case of error
+            XHR.addEventListener('error', function(event) {
+                alert('Oops! Something goes wrong.');
+            });
+
+            // Set up our request
+            XHR.open('POST', 'https://stackoverflow.com/oauth/access_token');
+
+            // Add the required HTTP header for form data POST requests
+            XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Finally, send our data.
+            XHR.send(urlEncodedData);
+        }
+
+        alert(<?php echo $code; ?>);
+
+        var data = {
+            client_id: "14152",
+            client_secret: "AMrLG*xYlOZJoGv5PMAFoA((",
+            code: <?php echo $code; ?>,
+            redirect_uri: "https://sl-mcq.herokuapp.com/authenticated.php"
+        };
+        
+        sendData(data);
     </script>
 </body>
 </html>
