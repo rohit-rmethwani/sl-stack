@@ -37,6 +37,8 @@
             // the '+' character; matches the behaviour of browser form submissions.
             urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
+            alert(urlEncodedData);
+
             // Define what happens on successful data submission
             XHR.addEventListener('load', function(event) {
                 alert('Yeah! Data sent and response loaded.');
